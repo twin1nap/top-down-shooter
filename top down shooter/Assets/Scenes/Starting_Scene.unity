@@ -409,7 +409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 79791253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294578248}
+        m_TargetAssemblyTypeName: StartingScreenScipt, Assembly-CSharp
+        m_MethodName: QuitBTN
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &79791253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,7 +1057,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534920624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294578248}
+        m_TargetAssemblyTypeName: StartingScreenScipt, Assembly-CSharp
+        m_MethodName: startGameBTN
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534920624
 MonoBehaviour:
   m_ObjectHideFlags: 0
