@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 667054513058690848}
   - component: {fileID: 1114952523175805966}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Zombie_ai_follow_player
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
