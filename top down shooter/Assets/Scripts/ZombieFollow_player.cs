@@ -4,18 +4,28 @@ using UnityEngine;
 
 public class ZombieFollow_Player : MonoBehaviour
 {
-    [SerializeField] private GameObject Player;
-    [SerializeField] private float Speed = 3.25f;
+    [SerializeField] public GameObject Target;           
+    [SerializeField] public float Speed = 3.25f;        // zombie snelheid
+    [SerializeField] public float followRange = 2f;     // Afstand wanneer de zombie gaat volgen
+    [SerializeField] public float stopRange = 1f;       // Afstand dat de zombie stopt
 
     void Update()
     {
-        // Calculate the direction to the player
-        Vector2 direction = (Player.transform.position - transform.position).normalized;
+        float distance = Vector2.Distance(transform.position, Target.transform.position);
 
-        // Move the zombie towards the player
-        transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, Speed * Time.deltaTime);
+        // checkt of de player dichtbij is
+        if (distance <= followRange)
+        {
+            // normalized gebruik je voor de vectors.
+            Vector2 direction = (Target.transform.position - transform.position).normalized;
 
-        // Face the player without rotating in 3D (lock rotation to 2D)
-        transform.up = direction;
+            transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
+
+            transform.up = direction;
+        }
+        // als de speler buiten range is, dan stopt hij met volgen.q
+        else if (distance > stopRange)
+        {
+        }
     }
 }
