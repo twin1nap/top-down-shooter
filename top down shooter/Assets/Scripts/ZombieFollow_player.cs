@@ -23,9 +23,10 @@ public class ZombieFollow_Player : MonoBehaviour
 
             transform.up = direction;
         }
-        // als de speler buiten range is, dan stopt hij met volgen.q
+        // als de speler buiten range is, dan stopt hij met volgen
         else if (distance > stopRange)
         {
+
         }
     }
 }
