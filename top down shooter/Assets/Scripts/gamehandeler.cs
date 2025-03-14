@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class gamehandeler : MonoBehaviour
 {
-    public int health = 100;
-    public TextMeshProUGUI health_text;
+    private static int health = 100;
+    public  TextMeshProUGUI health_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +14,17 @@ public class gamehandeler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         health_text.text = "health: " + health.ToString();
+        if (health <= 0)
+        {
+            Debug.Log("je bent dood :(");
+        }
     }
 
-    void health_down()
+    public static void health_down()
     {
         health--;
-        health_text.text = "health: " + health.ToString();
     }
 }
