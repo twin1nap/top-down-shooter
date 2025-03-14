@@ -21,6 +21,7 @@ public class ZombieFollow_Player : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
 
+            //draaien naar de direction(berekend hierboven)
             transform.up = direction;
         }
         // als de speler buiten range is, dan stopt hij met volgen

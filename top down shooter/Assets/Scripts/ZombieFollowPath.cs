@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class ZombieFollowPath : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class ZombieFollowPath : MonoBehaviour
 
         // Beweeg de zombie richting het huidige waypoint met de opgegeven snelheid
         transform.position = Vector2.MoveTowards(transform.position, WayPoints[PointIndex].position, moveSpeed * Time.deltaTime);
+
+        //kijk naar de point
+        Vector2 direction = (WayPoints[PointIndex].transform.position - transform.position).normalized;
+        transform.up = direction;
 
         // Controleer of de zombie dichtbij genoeg is bij het huidige waypoint
         if (Vector2.Distance(transform.position, WayPoints[PointIndex].position) < minDistance)
