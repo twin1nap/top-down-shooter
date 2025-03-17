@@ -8,6 +8,7 @@ public class gamehandeler : MonoBehaviour
 {
     private static int health = 100;
     public  TextMeshProUGUI health_text;
+    public TextMeshProUGUI ammo_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class gamehandeler : MonoBehaviour
             gamehandeler.health = 100;
             SceneManager.LoadScene("GameOver");
         }
+
+        ammo_text.text = shootBullit.Mag.ToString();
     }
 
     public static void health_down()

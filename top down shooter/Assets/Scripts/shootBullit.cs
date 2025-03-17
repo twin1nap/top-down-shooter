@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class shootBullit : MonoBehaviour
 {
-    public int Mag = 30;
+    public static int Mag = 30;
     int bullet_count = 90;
     public GameObject bullit;
     public Transform shootPoint;
