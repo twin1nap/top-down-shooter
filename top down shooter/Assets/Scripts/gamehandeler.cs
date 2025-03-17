@@ -20,6 +20,7 @@ public class gamehandeler : MonoBehaviour
         health_text.text = "health: " + health.ToString();
         if (health <= 0)
         {
+            gamehandeler.health = 100;
             SceneManager.LoadScene("GameOver");
         }
     }
