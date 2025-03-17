@@ -21,12 +21,16 @@ public class StartingScreenScipt : MonoBehaviour
 
     }
 
+    public void StartScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 
-    public void startGameBTN()
+    public void StartGameBTN()
     {
         // Start level 1
         Debug.Log("STARTING WORKS");
-        //SceneManager.LoadScene("Level_1");  
+        SceneManager.LoadScene("Level_1");
     }
     public void QuitBTN()
     {
