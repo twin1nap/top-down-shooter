@@ -6,13 +6,17 @@ using UnityEngine.UIElements;
 
 public class shootBullit : MonoBehaviour
 {
-    public int GunMag = 30;
+    public int Mag = 30;
+    int bullet_count = 90;
     public GameObject bullit;
     public Transform shootPoint;
     public float speed = 1000f;
 
     public float fireRate = 0.1f; // Adjust for desired RPM (0.1s = 600 RPM, 0.066s = 900 RPM, 0.08s = 750 RPM)
     private float timer;
+
+    bool reloading = false;
+    float timer_reload;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +28,38 @@ public class shootBullit : MonoBehaviour
     {
         timer += Time.deltaTime;
         
-        if (Input.GetMouseButton(0) && timer >= fireRate)
+        if ((Input.GetMouseButton(0) && timer >= fireRate) && Mag > 0)
         {
-            GunMag--;
+            Mag--;
 
             timer = 0;
 
             var tempball = Instantiate(bullit, shootPoint.position, shootPoint.rotation);
             tempball.GetComponent<Rigidbody2D>().AddForce(shootPoint.right * speed);
             Destroy(tempball, 10f);
+
+        }
+
+        else if (Input.GetMouseButton(0) && Mag <= 0)
+        {
+            if (!reloading)
+            {
+            Debug.Log("test");
+                reloading = true;
+                timer_reload = 0;
+            }
+            
+        }
+        if (reloading)
+        {
+            timer_reload += Time.deltaTime;
+            Debug.Log(timer_reload);
+            if (timer_reload >= 1.4)
+            {
+                Debug.Log("reloaded");
+                Mag = 30;
+                reloading = false;
+            }
         }
     }
 }
