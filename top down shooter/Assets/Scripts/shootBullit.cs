@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class shootBullit : MonoBehaviour
 {
+    public int GunMag = 30;
     public GameObject bullit;
     public Transform shootPoint;
     public float speed = 1000f;
@@ -25,6 +26,8 @@ public class shootBullit : MonoBehaviour
         
         if (Input.GetMouseButton(0) && timer >= fireRate)
         {
+            GunMag--;
+
             timer = 0;
 
             var tempball = Instantiate(bullit, shootPoint.position, shootPoint.rotation);
