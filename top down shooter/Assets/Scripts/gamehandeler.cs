@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gamehandeler : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class gamehandeler : MonoBehaviour
         health_text.text = "health: " + health.ToString();
         if (health <= 0)
         {
-            Debug.Log("je bent dood :(");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
     public static void health_down()
     {
         health--;
+
     }
 }
