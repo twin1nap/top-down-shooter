@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Tesing_scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Starting_Scene.unity
-    guid: 19a7b3976a4038141ad3e0a0b06be704
-  - enabled: 1
-    path: Assets/Scenes/Between_winning_screen.unity
-    guid: 20c7c9d2bd48a6d40927501e120926a1
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 3afdb2f1409c1774ea2edf4af247e70d
-  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 3e3bcfec23211284781c8ba96a51ccf4
   - enabled: 1
@@ -26,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: 49b9714ea907be84aaf0724b8ce25385
+  - enabled: 1
+    path: Assets/Scenes/Starting_Scene.unity
+    guid: 19a7b3976a4038141ad3e0a0b06be704
+  - enabled: 1
+    path: Assets/Scenes/Between_winning_screen.unity
+    guid: 20c7c9d2bd48a6d40927501e120926a1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3afdb2f1409c1774ea2edf4af247e70d
   - enabled: 1
     path: Assets/Scenes/Winning_screen.unity
     guid: 92d777ab3d5045041a7fa178d6e62166

@@ -8,14 +8,14 @@ public class gamehandeler : MonoBehaviour
 {
     private static int health = 100;
     public TextMeshProUGUI health_text;
+    public TextMeshProUGUI ammo_text;
 
     // Start is called before the first frame update
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
+        ammo_text.text = "Ammo: " + shootBullit.Mag.ToString();
 
 
 
@@ -27,7 +27,7 @@ public class gamehandeler : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
 
-        // Check if there are no zombies left
+
     }
 
     // Called when health decreases
