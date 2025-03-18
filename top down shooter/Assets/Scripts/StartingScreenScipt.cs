@@ -21,9 +21,9 @@ public class StartingScreenScipt : MonoBehaviour
 
     }
 
-    public void StartScene(string sceneName)
+    public void StartScene(string scene_Name)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(scene_Name);
     }
 
     public void StartGameBTN()
@@ -36,6 +36,6 @@ public class StartingScreenScipt : MonoBehaviour
     {
         // Stopt de game
         Debug.Log("QUITING WORKS");
-        //Application.Quit();
+        Application.Quit();
     }
 }

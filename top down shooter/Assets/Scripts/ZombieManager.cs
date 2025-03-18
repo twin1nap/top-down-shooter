@@ -1,35 +1,30 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;  // Needed for scene loading
+using UnityEngine.SceneManagement;
 
-public class ZombieManager : MonoBehaviour
+public class KillsManager : MonoBehaviour
 {
-    private int zombieCount;  // Count of active zombies
+    public static int killCount = 0; // Track number of kills
 
+    // Start is called before the first frame update
     void Start()
     {
-        // Count the number of zombies at the start of the game
-        zombieCount = GameObject.FindGameObjectsWithTag("Zombie").Length;
-        Debug.Log("Initial Zombie Count: " + zombieCount);  // Debugging log to confirm zombie count
+        // Reset the kill count when starting a new level
+        killCount = 0;
     }
 
-    // Call this method when a zombie is destroyed
-    public void ZombieDestroyed()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        // Decrease the zombie count when a zombie is destroyed
-        zombieCount--;
-        Debug.Log("Zombie Destroyed. Remaining Zombies: " + zombieCount);  // Debugging log
+        // Get the current scene name
+        string sceneName = SceneManager.GetActiveScene().name;
 
-        // Check if all zombies are dead
-        if (zombieCount == 0)
-        {
-            Debug.Log("All Zombies Destroyed! Loading Level_2...");
-            WinGame();
-        }
+
     }
 
-    void WinGame()
+    // This method will be called when a zombie dies
+    public static void IncreaseKillCount()
     {
-        // Ensure the scene name is correct and is in the build settings
-        SceneManager.LoadScene("Level_2");
+        killCount++;  // Increase the kill count
+        Debug.Log("Kill count: " + killCount);  // Debugging log
     }
 }
