@@ -10,8 +10,15 @@ public class gamehandeler : MonoBehaviour
     public TextMeshProUGUI health_text;
     public TextMeshProUGUI ammo_text;
 
-    // Start is called before the first frame update
+    public static int last_level_int;
+    public static int zombie_count;
+    public int zombieCount = zombie_count;
 
+    // Start is called before the first frame update
+    private void Start()
+    {
+        zombie_count = zombieCount;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -33,9 +40,28 @@ public class gamehandeler : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (zombie_count <= 0 && SceneManager.GetActiveScene().name != "Between_winning_screen")
+        {
+            last_level_int = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene("Between_winning_screen");
+        }
+    }
+
+    public static void ZombCount_Down()
+    {
+        zombie_count--;
+    }
+
     // Called when health decreases
     public static void health_down()
     {
         health--;
+    }
+
+    public static void load_next_level()
+    {
+        SceneManager.LoadScene(last_level_int++);  
     }
 }

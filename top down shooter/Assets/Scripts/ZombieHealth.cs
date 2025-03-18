@@ -25,7 +25,8 @@ public class ZombieHealth : MonoBehaviour
         if (healthZombie <= 0)
         {
             // Call the KillsManager to increase the kill count
-            KillsManager.IncreaseKillCount();
+            //KillsManager.IncreaseKillCount(); //bestaat niet meer
+            gamehandeler.ZombCount_Down();
 
             // Call the KillsManager to reduce the zombie count
 

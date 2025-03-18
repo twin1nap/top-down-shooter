@@ -18,7 +18,7 @@ public class bulletColider : MonoBehaviour
 
             // Destroy the bullet after it collides
             Destroy(gameObject);
-            KillsManager.IncreaseKillCount();
+            //KillsManager.IncreaseKillCount(); // bestaat niet meer
         }
 
         // Destroy the bullet if it hits anything other than the player

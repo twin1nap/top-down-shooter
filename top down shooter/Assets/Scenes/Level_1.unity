@@ -2452,6 +2452,10 @@ PrefabInstance:
       propertyPath: health_text
       value: 
       objectReference: {fileID: 934988716}
+    - target: {fileID: 1477006731930225766, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
+      propertyPath: zombieCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038054451263380191, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 873.195
