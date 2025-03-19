@@ -26,12 +26,13 @@ public class ZombieHealth : MonoBehaviour
         {
             // Call the KillsManager to increase the kill count
             //KillsManager.IncreaseKillCount(); //bestaat niet meer
+            Debug.Log("test1");
             gamehandeler.ZombCount_Down();
+            Debug.Log("test2");
 
             // Call the KillsManager to reduce the zombie count
-
-            // Destroy this zombie when health is 0 or less
             Destroy(gameObject);
+            // Destroy this zombie when health is 0 or less
         }
     }
 }
