@@ -7,8 +7,8 @@ using UnityEngine.UIElements;
 public class shootBullit : MonoBehaviour
 {
     public static int Mag = 30;
-    int bullet_count = 90;
-    public GameObject bullit;
+    public static int Ammo = 90;
+    public GameObject bullit_prefab;
     public Transform shootPoint;
     public float speed = 1000f;
 
@@ -34,7 +34,7 @@ public class shootBullit : MonoBehaviour
 
             timer = 0;
 
-            var tempball = Instantiate(bullit, shootPoint.position, shootPoint.rotation);
+            var tempball = Instantiate(bullit_prefab, shootPoint.position, shootPoint.rotation);
             tempball.GetComponent<Rigidbody2D>().AddForce(shootPoint.right * speed);
             Destroy(tempball, 10f);
 
@@ -58,6 +58,7 @@ public class shootBullit : MonoBehaviour
             {
                 Debug.Log("reloaded");
                 Mag = 30;
+                Ammo -= 30;
                 reloading = false;
             }
         }

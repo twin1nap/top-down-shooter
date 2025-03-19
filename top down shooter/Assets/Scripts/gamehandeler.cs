@@ -23,10 +23,12 @@ public class gamehandeler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-         
 
 
-        ammo_text.text = "Ammo: " + shootBullit.Mag.ToString();
+
+        ammo_text.text = "Ammo: " + shootBullit.Mag.ToString() + "/"  + shootBullit.Ammo.ToString();
+
+
 
 
 
