@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Zombie
   - RouletteTable
+  - AmmoBox
   layers:
   - Default
   - TransparentFX
