@@ -26,7 +26,7 @@ public class gamehandeler : MonoBehaviour
 
 
 
-        ammo_text.text = "Ammo: " + shootBullit.MagazineCapacity.ToString() + "/"  + shootBullit.AmmoInInventory.ToString();
+        ammo_text.text = "Ammo: " + shootBullit.Mag.ToString() + "/"  + shootBullit.Ammo.ToString();
 
 
 
