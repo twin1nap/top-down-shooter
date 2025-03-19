@@ -45,15 +45,26 @@ public class gamehandeler : MonoBehaviour
 
     private void Update()
     {
-        if (zombie_count <= 0 && (SceneManager.GetActiveScene().name != "Between_winning_screen");
+        if (zombie_count <= 0 && (SceneManager.GetActiveScene().name != "Between_winning_screen"))
         {
-            
-            last_level_int = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log(last_level_int);
-            SceneManager.LoadScene("Between_winning_screen");
-            if SceneManager.GetActiveScene().name != "Level_3")
+            // Controleer als zombies 0 zijn en of de huidige scène NIET "Between_winning_screen" is
 
+            if (SceneManager.GetActiveScene().name == "Level_3")
+            {
+                // Als de speler zich in Level 3 bevindt en alle zombies verslagen zijn, laad de winnningscène
+                SceneManager.LoadScene("Winning_screen");
+            }
+            else
+            {
+                // Sla het huidige scene-index op voordat we de volgende scene laden
+                last_level_int = SceneManager.GetActiveScene().buildIndex;
+                Debug.Log(last_level_int); // Print de huidige scene-index in de console voor debugging
+
+                // Laad de overgangsscherm naar de tussen scène
+                SceneManager.LoadScene("Between_winning_screen");
+            }
         }
+
         //else if (zombieCount <= 0 && SceneManager.GetActiveScene().name == "Level_3")
         //{
         //    SceneManager.LoadScene("Winning_screen");
