@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class shootBullit : MonoBehaviour
 {
@@ -59,6 +60,11 @@ public class shootBullit : MonoBehaviour
                 Debug.Log("reloaded");
                 Mag += 30;
                 Ammo -= 30;
+
+                if (Ammo == 0)
+                {
+                    gamehandeler.ammo_text.text = "0/0";
+                } 
                 reloading = false;
             }
         }

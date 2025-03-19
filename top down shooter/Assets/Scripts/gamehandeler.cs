@@ -9,7 +9,7 @@ public class gamehandeler : MonoBehaviour
 {
     public static int health = 100;
     public TextMeshProUGUI health_text;
-    public TextMeshProUGUI ammo_text;
+    public static TextMeshProUGUI ammo_text;
 
     public static int last_level_int;
     public static int zombie_count;
