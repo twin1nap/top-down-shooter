@@ -28,7 +28,7 @@ public class shootBullit : MonoBehaviour
     {
         timer += Time.deltaTime;
         
-        if ((Input.GetMouseButton(0) && timer >= fireRate) && Mag > 0)
+        if ((Input.GetMouseButton(0) && timer >= fireRate) && Mag > 0 && Ammo > 0)
         {
             Mag--;
 
