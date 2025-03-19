@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -45,6 +46,7 @@ public class gamehandeler : MonoBehaviour
         if (zombie_count <= 0 && SceneManager.GetActiveScene().name != "Between_winning_screen")
         {
             last_level_int = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log(last_level_int);
             SceneManager.LoadScene("Between_winning_screen");
         }
     }
@@ -62,6 +64,8 @@ public class gamehandeler : MonoBehaviour
 
     public static void load_next_level()
     {
-        SceneManager.LoadScene(last_level_int++);  
+        //was eerst last_level_int++ inside the LoadScene changed to + 1 explained below, other fix is putting the last_level_int++ line before the the LoadScene, seen above the LoadScene commented out 
+        //last_level_int++;
+        SceneManager.LoadScene(last_level_int + 1);  // last_level_int++ doet pas 1 bij last_level int na het laden van de scene
     }
 }

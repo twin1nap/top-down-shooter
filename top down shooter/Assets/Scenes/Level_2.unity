@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55722a821a67b6488ca7e706ff6246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthZombie: 0
 --- !u!1001 &199110178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2756,6 +2755,10 @@ PrefabInstance:
       propertyPath: health_text
       value: 
       objectReference: {fileID: 1350500725}
+    - target: {fileID: 1477006731930225766, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
+      propertyPath: zombieCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6038054451263380191, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 873.195
@@ -3053,7 +3056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55722a821a67b6488ca7e706ff6246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthZombie: 0
 --- !u!1 &1293283182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55722a821a67b6488ca7e706ff6246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthZombie: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
