@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class gamehandeler : MonoBehaviour
 {
-    private static int health = 100;
+    public static int health = 100;
     public TextMeshProUGUI health_text;
     public TextMeshProUGUI ammo_text;
 
@@ -78,9 +78,10 @@ public class gamehandeler : MonoBehaviour
     }
 
     // Called when health decreases
-    public static void health_down()
+    public static void health_down(GameObject Zombie)
     {
         health--;
+            
     }
 
     public static void load_next_level()

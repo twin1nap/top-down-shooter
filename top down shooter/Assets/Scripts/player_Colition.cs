@@ -17,12 +17,11 @@ public class player_Colition : MonoBehaviour
         timer += Time.deltaTime;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay2D()
     {
-        if (timer > 0.5f)
+        if (gameObject.CompareTag("Zombie")) // Check if the object has "Zombie" tag
         {
-            timer = 0;
-            gamehandeler.health_down();
+            gamehandeler.health--;
         }
     }
 }
