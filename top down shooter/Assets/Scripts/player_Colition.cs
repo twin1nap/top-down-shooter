@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class player_Colition : MonoBehaviour
 {
-    private float timer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float timer = 0f;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
     }
 
-    private void OnCollisionStay2D()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Zombie")) // Check if the object has "Zombie" tag
+        if (collision.gameObject.CompareTag("Zombie"))
         {
-            gamehandeler.health--;
+            if (timer >= 0.5f)
+            {
+                gamehandeler.health--;
+                Debug.Log("Health decreased! Current health: " + gamehandeler.health);
+
+                timer = 0f;
+            }
         }
     }
+
 }
