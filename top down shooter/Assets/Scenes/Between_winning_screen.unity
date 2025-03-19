@@ -657,8 +657,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9035302577862872340, guid: 1e6cfa89b5aac374aac799e8df8f0243, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035302577862872340, guid: 1e6cfa89b5aac374aac799e8df8f0243, type: 3}
+      propertyPath: shootPoint
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8980851936125719271, guid: 1e6cfa89b5aac374aac799e8df8f0243, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6cfa89b5aac374aac799e8df8f0243, type: 3}

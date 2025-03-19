@@ -431,7 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55722a821a67b6488ca7e706ff6246d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthZombie: 0
 --- !u!1 &1193970037
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +619,10 @@ PrefabInstance:
       propertyPath: health_text
       value: 
       objectReference: {fileID: 1280148651}
+    - target: {fileID: 1477006731930225766, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
+      propertyPath: zombieCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038054451263380191, guid: cd3a09ba7e1613f468b84302914f0e20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 873.195
@@ -984,6 +987,10 @@ PrefabInstance:
       propertyPath: speed
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 9035302577862872340, guid: 1e6cfa89b5aac374aac799e8df8f0243, type: 3}
+      propertyPath: bullit_prefab
+      value: 
+      objectReference: {fileID: 2691472649361646535, guid: 4acf1f5960fbebc4aa04a0f5bb32c2d3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
