@@ -40,7 +40,7 @@ public class shootBullit : MonoBehaviour
 
         }
 
-        else if (Input.GetMouseButton(0) && Mag <= 0 && Ammo >= 1)
+        else if (Input.GetMouseButton(0) && Mag <= 0 && Ammo >= 0)
         {
             if (!reloading)
             {
@@ -57,7 +57,7 @@ public class shootBullit : MonoBehaviour
             if (timer_reload >= 1.4)
             {
                 Debug.Log("reloaded");
-                Mag = 30;
+                Mag += 30;
                 Ammo -= 30;
                 reloading = false;
             }
