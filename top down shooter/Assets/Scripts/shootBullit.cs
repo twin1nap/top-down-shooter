@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 
 public class shootBullit : MonoBehaviour
 {
-    public static int Mag = 30;
-    public static int Ammo = 90;
+    public static int MagazineCapacity = 30;
+    public static int AmmoInInventory = 90;
     public GameObject bullit_prefab;
     public Transform shootPoint;
     public float speed = 1000f;
@@ -28,9 +28,9 @@ public class shootBullit : MonoBehaviour
     {
         timer += Time.deltaTime;
         
-        if ((Input.GetMouseButton(0) && timer >= fireRate) && Mag > 0 && Ammo > 0)
+        if ((Input.GetMouseButton(0) && timer >= fireRate) && MagazineCapacity > 0)
         {
-            Mag--;
+            MagazineCapacity--;
 
             timer = 0;
 
@@ -40,7 +40,7 @@ public class shootBullit : MonoBehaviour
 
         }
 
-        else if (Input.GetMouseButton(0) && Mag <= 0)
+        else if (Input.GetMouseButton(0) && MagazineCapacity <= 0 && AmmoInInventory >= 1)
         {
             if (!reloading)
             {
@@ -57,8 +57,8 @@ public class shootBullit : MonoBehaviour
             if (timer_reload >= 1.4)
             {
                 Debug.Log("reloaded");
-                Mag = 30;
-                Ammo -= 30;
+                MagazineCapacity = 30;
+                AmmoInInventory -= 30;
                 reloading = false;
             }
         }
