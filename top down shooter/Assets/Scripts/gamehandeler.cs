@@ -45,11 +45,14 @@ public class gamehandeler : MonoBehaviour
 
     private void Update()
     {
-        if (zombie_count <= 0 && (SceneManager.GetActiveScene().name != "Between_winning_screen" && SceneManager.GetActiveScene().name != "Level_3"))//  
+        if (zombie_count <= 0 && (SceneManager.GetActiveScene().name != "Between_winning_screen");
         {
+            
             last_level_int = SceneManager.GetActiveScene().buildIndex;
             Debug.Log(last_level_int);
             SceneManager.LoadScene("Between_winning_screen");
+            if SceneManager.GetActiveScene().name != "Level_3")
+
         }
         //else if (zombieCount <= 0 && SceneManager.GetActiveScene().name == "Level_3")
         //{
