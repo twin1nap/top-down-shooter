@@ -19,6 +19,14 @@ public class gamehandeler : MonoBehaviour
     private void Start()
     {
         zombie_count = zombieCount;
+        if (SceneManager.GetActiveScene().name == "Level_1")
+        {
+            health = 100;
+            shootBullit.Ammo = 90;
+            shootBullit.Mag = 30;
+        }
+
+ 
     }
     // Update is called once per frame
     void FixedUpdate()
