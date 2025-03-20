@@ -12,7 +12,6 @@ public class shootBullit : MonoBehaviour
     public GameObject bullit_prefab;
     public Transform shootPoint;
     public float speed = 1000f;
-    public TextMeshProUGUI ammoTEXT; 
 
     public float fireRate = 0.1f; // Adjust for desired RPM (0.1s = 600 RPM, 0.066s = 900 RPM, 0.08s = 750 RPM)
     private float timer;

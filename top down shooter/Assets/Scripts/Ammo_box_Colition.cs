@@ -18,7 +18,10 @@ public class Ammo_box_Colition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
         shootBullit.Ammo += 30;
         Destroy(gameObject);
+        }
     }
 }
