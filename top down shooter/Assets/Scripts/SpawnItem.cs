@@ -22,7 +22,7 @@ public class SpawnItem : MonoBehaviour
         spawnpos = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
         Debug.Log(spawnpos);
         Debug.Log(spawnTime);
-        item_to_spawn_int = Random.Range(0, 1);
+        item_to_spawn_int = Random.Range(0, 2);
         if (item_to_spawn_int == 0)
         {
             item_to_spawn = ammo;
@@ -42,12 +42,12 @@ public class SpawnItem : MonoBehaviour
         if (timer > spawnTime)
         {
             timer = 0;
-            Instantiate(ammo, spawnpos.position, Quaternion.identity);
+            Instantiate(item_to_spawn, spawnpos.position, Quaternion.identity);
 
             //zodat je van het volgende kan zien
             spawnTime = Random.Range(6f, 10f);
             spawnpos = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
-            item_to_spawn_int = Random.Range(0, 1);
+            item_to_spawn_int = Random.Range(0, 2);
             if (item_to_spawn_int == 0)
             {
                 item_to_spawn = ammo;

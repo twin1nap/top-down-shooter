@@ -6,7 +6,7 @@ public class medpack_colition : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && gamehandeler.health < 0)
+        if (collision.CompareTag("Player") && gamehandeler.health < 100)
         {
             if (gamehandeler.health + 35 > 100)
             {
