@@ -28,15 +28,12 @@ public class StartingScreenScipt : MonoBehaviour
 
     public void StartGameBTN()
     {
-        // Start level 1
-        gamehandeler.health = 100;
-        shootBullit.Ammo = 90;
-        shootBullit.Mag = 30;
+     
+
         SceneManager.LoadScene("Level_1");
     }
     public void QuitBTN()
     {
-        // Stopt de game
         Debug.Log("QUITING WORKS");
         Application.Quit();
     }
