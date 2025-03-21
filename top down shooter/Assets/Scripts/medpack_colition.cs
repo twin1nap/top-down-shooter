@@ -8,7 +8,7 @@ public class medpack_colition : MonoBehaviour
     {
         if (collision.CompareTag("Player") && gamehandeler.health < 100)
         {
-            if (gamehandeler.health + 35 > 100)
+            if ((gamehandeler.health + 35) > 100)
             {
                 gamehandeler.health = 100;
             }

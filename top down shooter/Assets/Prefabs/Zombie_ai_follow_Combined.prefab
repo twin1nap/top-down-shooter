@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8279884896583601910}
   - component: {fileID: 2549639920763742602}
   - component: {fileID: 7234513507005423280}
-  - component: {fileID: 7574337614463441982}
+  - component: {fileID: -3198259074235134248}
   m_Layer: 0
   m_Name: Zombie_ai_follow_Combined
   m_TagString: Zombie
@@ -159,7 +159,7 @@ PolygonCollider2D:
       - {x: 0.69, y: -0.475}
       - {x: 0.94, y: -0.195}
   m_UseDelaunayMesh: 0
---- !u!114 &7574337614463441982
+--- !u!114 &-3198259074235134248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,11 +168,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6013768009282418263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b22ef8153a2d2f41a9303fc12f0a306, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f60ad8c6611d0a43995f81ec7df77b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  moveSpeed: 3.25
+  FollowPlayer: 0
+  FollowWaypoint: 0
+  FollowCombined: 0
+  Speed: 3.25
+  Target: {fileID: 0}
+  followRange: 3
+  WayPoints: []
