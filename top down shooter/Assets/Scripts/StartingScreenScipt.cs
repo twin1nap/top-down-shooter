@@ -28,13 +28,12 @@ public class StartingScreenScipt : MonoBehaviour
 
     public void StartGameBTN()
     {
-        // Start level 1
-        Debug.Log("STARTING WORKS");
+     
+
         SceneManager.LoadScene("Level_1");
     }
     public void QuitBTN()
     {
-        // Stopt de game
         Debug.Log("QUITING WORKS");
         Application.Quit();
     }

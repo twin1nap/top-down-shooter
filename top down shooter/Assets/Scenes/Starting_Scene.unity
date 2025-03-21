@@ -1524,10 +1524,10 @@ MonoBehaviour:
 
     S = Move backwards
 
-    A = Move to the right
+    A = Move to the left
 
     D=
-    Move to the left
+    Move to the right
 
     MOUSE1(left mouse button) = Shooting
 
